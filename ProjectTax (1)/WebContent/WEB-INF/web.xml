@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <servlet>
+        <servlet-name>CalcTax</servlet-name>
+        <servlet-class>controller.CalcTax</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+  
+  
+  <listener>
+    <listener-class> controller.ContextListener </listener-class>
+  </listener>
+  <listener>
+    <listener-class> controller.SessionCounter </listener-class>
+  </listener>
+ 
+  <display-name>ProjectTax</display-name>
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>Elena Aydogdyeva</param-value>
+  </context-param>
+  <context-param>
+    <param-name>mail</param-name>
+    <param-value>eleayda@hotmail.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>company</param-name>
+    <param-value>Teknikhögskolan</param-value>
+  </context-param>
+  <context-param>
+    <param-name>division</param-name>
+    <param-value>JUH14</param-value>
+  </context-param>
+  <welcome-file-list>
+   
+    <welcome-file>index.html</welcome-file>
+    
+  </welcome-file-list>
+</web-app>

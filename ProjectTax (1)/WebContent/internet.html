@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Kommunikation via internet</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+
+<h1>Kommunikation via internet</h1>
+<p>Man kan göra mycket med hjälp av sin dator. Men för att ta del i vad andra människor har gjort, behöver din dator
+vara kopplat till andras datorer. När olika datorer kopplas samman, bildar de ett datanätverk.En dator kan ingå 
+i ett eller flera olika nätverk. <b>Syfte med datanätverk är datakommunikation.</b></p>
+<h2>Skillnaden mellan internet och WWW</h2>
+<p>Internet är ett <b>fysiskt nätverk</b> som kopplar samman datorer. 
+WWW (World Wide Web) är en <b>tjänst</b>, som man kommer åt på internet.
+T.ex: WWW gör det möjligt att besöka olika websidor.
+ </p>
+<h2 id="protocol">Protokoll</h2>
+Protokoll är en uppsättning av regler som säger hur olika datorer och annan datautrustning 
+(routrar, skrivare, etc.) ska kommunicera med varandra i ett datanätverk. 
+<h2>Port</h2>
+Port är en <b>ändelse</b> på den slutliga nätverksadressen till vilken överförs data vid datakommunikation. 
+Port nummer specificeras för varje program eller process. Portnummer vid internetkommunikation läggs till IP-adressen.
+ Syfte med ett portnummer är att navigera inkommande
+ datapaket till en rätt process eller program inom en och samma dator.   
+<h2 id="stack">Stack</h2>
+<img src = "pyramid.jpg" alt="pyramid" align="right"/> 
+Namnet "stack" kommer från engelskan och betyder "hög" eller "stapel".
+På stacken kan man endast lägga en komponent eller ta bort den översta. Komponenter inne i stacken kan inte kommas åt 
+utan att ovanpåliggande komponent först tas bort. 
+
+ <h2>OSI modellen och dess olika skikt</h2>
+När två datorer kommunicerar med varandra, innebär detta att en dator skickar en mängd information 
+till en annan. För att informationen ska kunna komma fram samt presenteras hos mottagaren på ett rätt sätt, 
+måste de två datorer följa samma standarder. 
+
+<b>OSI står för Open Systems Interconnection. </b><br/>
+Syftet med modellen var att ringa in tekniska och funktionella problem som hänger ihop med datakommunikation
+ och att ge anvisningar om hur dessa problem ska hanteras. Målet med OSI-modellen var att skapa ett regelsystem 
+ som skulle ligga till grund för standarder inom området datakommunikation. 
+<br/>OSI-modellen är en abstraktion, som delar in datakommunikations process i 7 olika delprocesser: 
+ 7 skikt (=layers).
+<h3>OSI-modellen</h3>
+<ul>
+<li>7. Applikation</li> 
+<li>6. Presentation</li>
+<li>5. Session</li>
+<li>4. Transport</li>
+<li>3. Nätverk</li>
+<li>2. Datalänk</li>
+<li>1. Fysiskt</li>
+
+</ul>
+
+Innan en datamängd ska skickas från sändaren, förbereds den genom att passera från skikt till skick. Starten är skikt 7,
+därefter 6,5,4,3,2 och slutligen 1.
+ I varje skikt får den ursprungliga koden en tilläggskod som är instruktion till motsvarande skikt hos mottagaren.
+ Vid överföringen, hos mottagaren sker den omvända processen. Koden passerar olika skikt från 1 till 7. 
+ Den relevanta kodtillägg läses in av det skikt som koden avser. Därefter raderas tilläggskoden  och
+ kommunikations process löper vidare till nästa skikt, tills överföringen är klar. 
+OSI-modellen är en abstraktion, som säger VAD som ska göras, men inte HUR. OSI-modellen omfattar all sort datakommunikation.
+<br/>
+<h2>TCP/IP stacken</h2>
+<p> Till skillnad från OSI-modellen,
+ är TCP/IP <a href="#stack">stacken</a> en väl definierad arkitektur som används för <b> datakommunikation via Internet.
+ </b> 
+ TCP/IP stacken består av två <a href="#protocol">protokoll</a>:
+ 
+ TCP - Transmission Control Protocol och IP - Internet Protocol. TCP/IP stacken delas in i 5 lager. 
+ Skillnaden från OSI-modellen är att TCP/IP stacken har bara 5 lager (OSI-modellen har 7). Lager 5 på TCP/IP stacken ersätter skikt 7,6, och 5 hos OSI-modellen.
+Med andra ord lager 5 på TCP/IP stacken inehåller information om Applikation, Presentation och Session.
+ </p>
+ <h3>TCP/IP stacken</h3>
+ <ul>
+<li>5. Applikation,  Presentation, Session</li>
+<li>4. Transport</li>
+<li>3. Nätverk</li>
+<li>2. Datalänk</li>
+<li>1. Fysiskt</li>
+
+</ul>
+
+
+ <br/>
+
+<p>
+<a href="index.html"> Tillbaka till startsidan</a>
+</p>
+<br/>
+<br/>
+©Elena Aydogdyeva, JUH14, Teknikhögskolan, mail: eleayda@hotmail.com 
+</body>
+
+</html>

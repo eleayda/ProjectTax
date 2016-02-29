@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Inkomst Räknaren</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+ 
+
+<h1>KONSULT vs ANSTÄLLD</h1>
+<br/>
+<h2>Inkomst Räknaren</h2>
+<p>
+<em>(Använd det här formuläret för att jämföra din inkomst som anställd <br/>
+mot din inkomst som företagare)</em> 
+
+
+</p>
+
+<form action="CalcTax" name="calcForm" method="get">
+
+<table>
+<tr>
+<th><h3>Min inkomst som anställd</h3></th>
+</tr>
+<tr>
+
+<td><b>Bruttolön</b>  
+
+<input type="radio" name="saloryPer" value="11" checked="checked"/>månad
+<input type="radio" name="saloryPer" value="1848"/>timma <b style="color: red">*</b> :
+</td><td>
+
+<input type="text" name="salory" maxlength="10"  onblur="checkTextField(this);" /> kr    
+
+</td>
+</tr>
+<tr>
+<td><b>Förmåner</b>  
+
+<input type="radio" name="favorPer" value="12" checked="checked"/>månad
+<input type="radio" name="favorPer" value="1" />år
+:
+</td><td>
+
+<input type="text" name="favor" maxlength="10"/> kr    
+</td>
+</tr>
+<tr>
+<th><h3>Min intäkt som konsult (ex MOMS)</h3></th>
+</tr>
+<tr>
+
+<td><b>Pris</b> för mina tjänster per Timma <b style="color: red">*</b> :</td>
+<td>
+<input type="text" name="price" maxlength="10" onblur="checkTextField(this);" /> kr  
+
+
+
+</td>
+</tr>
+<tr>
+<th><h3>Mina fasta* kostnader som konsult (ex MOMS)</h3>
+<p><em>(*kostnader som betalas även om det <br/> inte kommer några uppdrag)</em>
+</p>
+</th>
+</tr>
+
+<tr>
+<td><b>Kontor </b><input type="radio" name="officePer" value="12" checked="checked"/>månad
+<input type="radio" name="officePer" value="1"/>år :</td><td>
+<input type="text" name="office"/> kr 
+
+
+
+</td> 
+</tr>
+<tr>
+<td><b>Programvaror </b><input type="radio" name="progPer" value="12" checked="checked"/>månad
+<input type="radio" name="progPer" value="1"/> år  :</td>
+<td>
+<input type="text" name="prog"/> kr 
+
+
+
+</td> 
+</tr>
+
+<tr>
+<td><b>Resekostnader</b> <input type="radio" name="carPer" value="12" checked="checked"/>månad
+<input type="radio" name="carPer" value="1"/>år :</td>
+<td>
+<input type="text" name="car"/> kr  
+
+
+
+</td> 
+</tr>
+
+<tr>
+<td><b>Övriga kostnader</b>  <input type="radio" name="extraPer" value="12" checked="checked"/>månad
+<input type="radio" name="extraPer" value="1"/>år :</td><td>
+<input type="text" name="extra"/> kr   
+
+
+
+</td> 
+</tr>
+
+
+</table>
+
+
+
+<br/>
+Min ålder är: 
+<br/>
+
+<select name="age" >
+	<option value="adult" selected="selected" > 25 år eller äldre</option>
+	<option value="youth"> under 25 år</option>
+	
+	
+</select>
+<br/>
+<br/>
+
+<input type="submit" value="räkna"/>
+
+<input type="reset" value="börja om"/>
+
+
+
+</form>
+
+
+
+
+
+
+
+<p>
+<a href="index.html"> Tillbaka till startsidan  </a>
+</p>
+
+<script type="text/javascript">
+function checkTextField(field) {
+    var numbers = /^[-+]?[0-9]+$/;  
+     if(!field.value.match(numbers))  
+		alert("fyll i ett numeriskt tal!");
+	   
+}
+
+
+</script>
+<br/>
+<br/>
+©Elena Aydogdyeva, JUH14, Teknikhögskolan, mail: eleayda@hotmail.com 
+</body>
+
+</html>
